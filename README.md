@@ -1,8 +1,5 @@
 # martian-elizondo
-React.js Proyecto ecommerce
+Proyecto ecommerce. 
 Alumna: Casandra Marisel Elizondo
 
-Recordar hacer
-# npm install
-Antes del
-# npm start
+*Recordar hacer **npm install** antes del **npm start***
