@@ -1,0 +1,13 @@
+.navbar-brand {
+    color: #676cb8 !important;
+    margin-left: 1rem;
+    font-size: 1.4em;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .nav-link.active {
+    color: #a6a7b8 !important;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .nav-link.active:hover {
+    color: #676cb8 !important;
+}
