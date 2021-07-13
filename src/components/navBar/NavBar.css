@@ -1,6 +1,11 @@
+#nav-bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Sobreescrituras a bootstrap*/
 .navbar-brand {
     color: #676cb8 !important;
-    margin-left: 1rem;
     font-size: 1.4em;
 }
 
