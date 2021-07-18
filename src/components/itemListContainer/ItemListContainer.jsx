@@ -1,23 +1,16 @@
-import {useState} from 'react'
+import ItemCount from '../itemCount/ItemCount';
 import './ItemListContainer.css';
 
 function ItemListContainer({greeting}) {
 
-    const [count, setCount] = useState(0)
-    const [date, setDate] = useState(null)
-
-    const handleCount = () => {
-        setCount(count+1)
-        setDate(Date())
+    const onAdd= () => {
+        alert('toco on add')
     }
 
     return (
         <>
             <h5>{greeting}</h5>
-            <h6>{count}</h6>
-            <h6>{date}</h6>
-            <button onClick={handleCount}>Subir contador</button>
-
+            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
         </>
     )
 }
