@@ -2,7 +2,14 @@
     margin: 0px 21px;
 }
 
-Col Button {
-    margin-bottom: 5px;
-    background-color: aqua;
+.btn-count {
+    margin: 10px 0px !important;
+}
+
+#add-cart {
+    margin: 10px 20px !important;
+}
+
+#card {
+    width: 32% !important;
 }
