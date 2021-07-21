@@ -1,5 +1,7 @@
-import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.css'
 import './CartWidget.css';
+
+import Button from 'react-bootstrap/Button'
 
 function CartWidget() {
     return (

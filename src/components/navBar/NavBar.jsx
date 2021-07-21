@@ -1,8 +1,7 @@
-import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
 import './NavBar.css';
+
+import { Navbar, Nav } from 'react-bootstrap'
 import CartWidget from '../cartWidget/CartWidget';
 
 function NavBar() {

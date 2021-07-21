@@ -9,6 +9,6 @@ h5 {
 }
 
 .row {
-    display: flex;
+    display: grid;
     justify-content: space-between;
 }

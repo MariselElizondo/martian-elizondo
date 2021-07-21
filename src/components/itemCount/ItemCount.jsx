@@ -1,6 +1,9 @@
 import { useState } from 'react'
-import { Button, Card } from 'react-bootstrap'
+
+import 'bootstrap/dist/css/bootstrap.css'
 import './ItemCount.css'
+
+import { Button, Card } from 'react-bootstrap'
 
 function ItemCount({ name, initial, stock, onAdd }) {
 
@@ -8,17 +11,20 @@ function ItemCount({ name, initial, stock, onAdd }) {
     const [itemStock, setItemStock] = useState(stock)
  
     const handleSum = () => {
-        setCount(count + 1)
+        count < itemStock ? setCount(count + 1) : alert("No hay más stock")
     }
 
     const handleDiscount = () => {
-        setCount(count - 1)
+        count > 1 ? setCount(count - 1) : alert("No puede agregar al carrito una cantidad inferior a uno de un producto")  
     }
 
     const update = () => {
-        let newStock = itemStock - count
-        setItemStock(newStock)
-        setCount(initial)
+        if ( itemStock > 0 ) {
+            onAdd(count, name)
+            let newStock = itemStock - count
+            setItemStock(newStock)
+            setCount(initial)
+        } else { alert("Acción inválida, no hay más stock") }
     }
 
     return (
@@ -31,16 +37,16 @@ function ItemCount({ name, initial, stock, onAdd }) {
                     <div className="container-1">
                         <div className="count-discount">
                             <Button variant="secondary" className="btn-count" 
-                            onClick={() => count > 0 ? handleDiscount(itemStock): alert("No puede ser inferior a cero")}>
+                            onClick={() => handleDiscount()}>
                                 -
                             </Button>
                             <span id="count">{count}</span>
                             <Button variant="secondary" className="btn-count" 
-                            onClick={() => count < itemStock ? handleSum(itemStock): alert("No hay más stock")}>
+                            onClick={() =>  handleSum()}>
                                 +
                             </Button>  
                         </div>
-                        <Button variant="dark" id="add-cart"onClick={() => itemStock > 0 ? onAdd(count, name) & update() : alert("Acción inválida, no hay más stock")}>Agregar al carrito</Button>                
+                        <Button variant="dark" id="add-cart"onClick={() => update() }>Agregar al carrito</Button>                
                     </div>
                 </Card.Body>
             </Card>
