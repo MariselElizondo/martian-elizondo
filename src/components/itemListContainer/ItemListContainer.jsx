@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import './ItemListContainer.css';
 
 import ItemList from '../itemList/ItemList';
+import ItemDetailContainer from '../itemDetailContainer/ItemDetailContainer';
 
 function ItemListContainer({greeting}) {
 
@@ -32,22 +33,12 @@ function ItemListContainer({greeting}) {
         .catch(err => console.log(err))
     }, [])
 
-    /* const handleCount= (quantity, name) => {
-        alert('Acaba de añadir al carrito ' + quantity + ' unidades de ' + name)
-    } */
-    
     return (
         <div id="content" >
 
             <h5>{greeting}</h5>
             <ItemList list={itemList}/>
-
-            {/* <Row>
-                <ItemCount name="Remera azul" initial={1} stock={10} onAdd={handleCount}/>
-                <ItemCount name="Remera roja" initial={1} stock={6} onAdd={handleCount}/>
-                <ItemCount name="Remera blanca" initial={1} stock={50} onAdd={handleCount}/>
-            </Row> */}
-                
+            <ItemDetailContainer/>
         </div>
     )
 }
