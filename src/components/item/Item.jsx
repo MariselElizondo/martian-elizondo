@@ -16,12 +16,8 @@ function Item({id, title, description, price, pictureUrl}) {
                 <Card.Img variant="top" src={pictureUrl} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
-                    <div className="container-1">
-                        <p>{description} </p>
-                    </div>
                     <div className="container-1 mb-3">
-                        <div>Cod: {id}</div> 
-                        <strong className='price'>{price || 'invaluable'}</strong>
+                        <strong className='price'>{price}</strong>
                     </div>
                     <ItemCount name={title} initial={1} stock={10} onAdd={handleCount}/>
                 </Card.Body>

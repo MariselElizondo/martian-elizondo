@@ -1,0 +1,17 @@
+.detail { width: 70% !important }
+
+.upper {
+    text-transform: uppercase;
+}
+
+@media (max-width:1150px ) {
+
+    .detail { width: 90% !important }
+
+}
+
+@media (max-width: 780px ) {
+
+    .detail { width: 100% !important }
+    
+}

@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css'
 import './ItemList.css';
 
 import { Row } from 'react-bootstrap'
