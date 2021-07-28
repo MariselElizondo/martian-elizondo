@@ -12,15 +12,18 @@ import { getMock } from '../../services/getMock';
 function ItemDetailContainer() {
 
     const [item, setItem] = useState({})
+    const [loading, setLoading] = useState(false)
+
     const {itemId} = useParams()
 
-    
     useEffect(() => {
 
         const getItemMock = new Promise ((res, rej) => {
             setTimeout(() => {
+                setLoading(true)
                 res(getMock())
-            }, 0);
+                rej("Error");
+            }, 2000);
         });
 
         getItemMock
@@ -30,7 +33,7 @@ function ItemDetailContainer() {
 
     return (
         <>
-            <ItemDetail id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} />
+            { loading ? <ItemDetail id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} /> : (<div className="my-spinner spinner-border text-info" role="status"></div>)}
         </>
     )
 }

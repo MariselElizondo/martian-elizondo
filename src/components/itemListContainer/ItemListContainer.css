@@ -14,6 +14,10 @@ h5 {
 
 #card { width: 25% !important }
 
+.my-spinner {
+    margin: 10% 50%;
+}
+
 @media (max-width: 1400px ) {
 
     #card { width: 25% !important }

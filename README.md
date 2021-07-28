@@ -2,7 +2,7 @@
 Proyecto: Martian
 Alumna: Casandra Marisel Elizondo
 
-Para este proyecto decidí hacer uso de Componentes de react bootstrap facilitando cuestiones  estéticas y responsive, además de lograr una mejor visualización del código por medio de dichos componentes; no añadí otras librerias externas.
+Para este proyecto decidí hacer uso de Componentes de react bootstrap facilitando cuestiones  estéticas y responsive, además de lograr una mejor visualización del código por medio de dichos componentes; no añadí otras librerias externas siguiendo la directriz del curso de reducir las dependencias usadas que son fácilmente reemplazables.
 
 Me enfoqué en realizar un Ecommerce el cual llamé Martian que vende productos comestibles de almacen, verdulería, panadería y carnicería. 
 La sección principal a la cual abre inicialmente es la que tiene todos los productos. Puede navegar entre secciones filtrando el contenido según corresponda (por la categoría). Al presionar sobre la card de un artículo se puede ver el detalle del mismo con la opción de añadirlo al changuito (lo cual actualmente solo se visualiza como un alert)
