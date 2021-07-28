@@ -14,15 +14,13 @@ function ItemDetailContainer() {
         const getItemMock = new Promise ((res, rej) => {
             setTimeout(() => {
                 res(getMock())
-            }, 2000);
+            }, 0);
         });
 
         getItemMock
         .then(res => res.filter( i => i.id === itemId ? setItem(i) :''))
         .catch(err => console.log(err))
     }, [itemId])
-
-    console.log(itemId)
 
     return (
         <>

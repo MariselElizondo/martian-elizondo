@@ -1,14 +1,8 @@
-#count {
-    padding: 0px 20%;
-}
+#count { padding: 0px 20% }
 
-.btn-count {
-   width: 20% !important;
-}
+.btn-count { width: 20% !important }
 
-#add-cart {
-    width: 50%;
-}
+#add-cart { width: 50% }
 
 .card-body {
     padding: 20px 0px !important;

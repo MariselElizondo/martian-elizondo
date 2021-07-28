@@ -1,6 +1,7 @@
 .card {
     width: 24%;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .spaced {
@@ -8,10 +9,24 @@
     justify-content: space-between;
 }
 
-.price {
-    border-radius: 25%;
-    padding: 0px 3px ;
-    background-color: #6c757d;
-    color: white;
-    box-shadow: 2px 2px  10px#6c757d;
+.container-1 { 
+    margin-bottom: 20px;
 }
+
+.first {
+    margin-top: 20%;
+}
+
+.price {
+    color: #6469B2;
+    border-radius: 25%;
+    padding: 2px 4px;
+    box-shadow: 2px 2px 20px#6c757d;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover { color: #6469B2 }

@@ -15,17 +15,18 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
                 <Card.Body>
                     <Row>
                         <Col className='col-5'>
-                            <Card.Img variant="top" src={pictureUrl} />
+                            <Card.Img variant='top' src={pictureUrl} />
                         </Col>
-                        <Col>
-                            <Row>
-                                <Card.Title className="upper">{title}</Card.Title>
+                        <Col className='col-1'/>
+                        <Col className='more-detail col-5'>
+                            <Row className="first">
                                 <div className="container-1">
-                                    <p>{description} </p>
-                                    <div>Cod: {id}</div> 
-                                    <div className="container-1 mb-3">
-                                        <strong className='price'>{price}</strong>
-                                    </div>
+                                    <Card.Title className="upper">{title}</Card.Title>
+                                    <strong className='price'>$ {price}</strong> 
+                                </div>
+                                <div className="container-1">
+                                    <div>Cod: {id}</div>
+                                    <p>{description} </p>  
                                 </div>
                             </Row>
                             <Row>

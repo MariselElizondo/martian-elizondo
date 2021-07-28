@@ -1,5 +1,13 @@
 const products = [
     {
+        id:'aa1502', 
+        cat:'almacen',
+        title:"Mayonesa Hellmann's doy pack", 
+        description:' 475 cc.',
+        price:129.30, 
+        pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/200583-1200-auto?width=1200&height=auto&aspect=true'
+    },
+    {
         id:'aa1562', 
         cat:'almacen',
         title:'Aceite de girasol', 

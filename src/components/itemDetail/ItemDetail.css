@@ -1,4 +1,7 @@
-.detail { width: 70% !important }
+.detail { 
+    width: 70% !important; 
+    margin: 2% 15%;
+}
 
 .upper {
     text-transform: uppercase;
@@ -6,12 +9,18 @@
 
 @media (max-width:1150px ) {
 
-    .detail { width: 90% !important }
+    .detail { 
+        width: 90% !important;
+        margin: 2% 5%;
+    }
 
 }
 
 @media (max-width: 780px ) {
 
-    .detail { width: 100% !important }
+    .detail { 
+        width: 100% !important;
+        margin: 0%; 
+    }
     
 }

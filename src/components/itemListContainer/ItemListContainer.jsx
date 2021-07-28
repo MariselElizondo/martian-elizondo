@@ -18,7 +18,7 @@ function ItemListContainer({greeting}) {
         const getProducts = new Promise ((res, rej) => {
             setTimeout(() => {
                 res(getMock())
-            }, 2000);
+            }, 0);
         });
 
         const asyncGetProducts = () => {
