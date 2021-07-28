@@ -9,10 +9,10 @@
     font-size: 1.4em;
 }
 
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .nav-link.active {
+.nav-link {
     color: #a6a7b8 !important;
 }
 
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .nav-link.active:hover {
+.nav-link:hover {
     color: #676cb8 !important;
 }

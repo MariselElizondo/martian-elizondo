@@ -10,10 +10,6 @@
     width: 50%;
 }
 
-#card {
-    width: 32% !important;
-}
-
 .card-body {
     padding: 20px 0px !important;
 }
@@ -38,8 +34,6 @@
         width: 100%;
     }
     
-    #card { width: 32% !important }
-    
     .card-body { padding: 20px 0px !important }
     
     .container-1 {
@@ -60,8 +54,6 @@
         margin-top: 5%;
         width: 100%;
     }
-    
-    #card { width: 32% !important }
     
     .card-body { padding: 20px 0px !important }
     

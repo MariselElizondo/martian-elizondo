@@ -9,6 +9,23 @@ h5 {
 }
 
 .row {
-    display: grid;
-    justify-content: space-between;
+    margin-right: auto;
+}
+
+#card { width: 25% !important }
+
+@media (max-width: 1400px ) {
+
+    #card { width: 25% !important }
+}
+
+@media (max-width: 1060px ) {
+
+    #card { width: 33.33% !important }
+}
+    
+
+@media (max-width: 600px ) {
+
+    #card { width: 100% !important }
 }
