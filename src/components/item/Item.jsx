@@ -3,6 +3,7 @@ import './Item.css'
 
 import { Card } from 'react-bootstrap'
 import ItemCount from '../itemCount/ItemCount'
+import { Link } from 'react-router-dom'
 
 function Item({id, title, description, price, pictureUrl}) {
     
@@ -13,14 +14,16 @@ function Item({id, title, description, price, pictureUrl}) {
     return (
         <>
             <Card id='card'>
-                <Card.Img variant="top" src={pictureUrl} />
-                <Card.Body>
-                    <Card.Title>{title}</Card.Title>
-                    <div className="container-1 mb-3">
-                        <strong className='price'>{price}</strong>
-                    </div>
-                    <ItemCount name={title} initial={1} stock={10} onAdd={handleCount}/>
-                </Card.Body>
+                <Link to={`/item/${id}`}>
+                    <Card.Img variant="top" src={pictureUrl} />
+                    <Card.Body>
+                        <Card.Title>{title}</Card.Title>
+                        <div className="container-1 mb-3">
+                            <strong className='price'>{price}</strong>
+                        </div>
+                        <ItemCount name={title} initial={1} stock={10} onAdd={handleCount}/>
+                    </Card.Body>
+                </Link>    
             </Card>
         </>
     )

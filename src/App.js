@@ -13,8 +13,8 @@ function App() {
         <NavBar/>
         <Switch>
           <Route exact path="/" component={ItemListContainer} /> {/* exact-> toma exactamente lo que le mando, para no "duplicar" */}
-          <Route exact path="/detail" component={ItemDetailContainer} /> 
           <Route exact path="/categoria/:categoryId" component={ItemListContainer} /> {/* :parametroDinámico */}
+          <Route exact path="/item/:itemId" component={ItemDetailContainer} /> 
         </Switch>
       </div>
     </Router>
