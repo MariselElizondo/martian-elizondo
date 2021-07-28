@@ -1,15 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.css'
 import './Item.css'
 
+//Componentes
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-function Item({id, title, description, price, pictureUrl}) {
+function Item({id, title, cat, price, pictureUrl}) {
     
     return (
         <>
             <Card id='card'>
-                <Link to={`/item/${id}`}>
+                <Link to={`/categoria/${cat}/${id}`}>
                     <Card.Img variant="top" src={pictureUrl} />
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>

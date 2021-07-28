@@ -1,6 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.css'
 import './NavBar.css';
 
+//Componentes
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav } from 'react-bootstrap'
 import CartWidget from '../cartWidget/CartWidget';
@@ -9,7 +9,6 @@ function NavBar() {
     return (
         <>
             <Navbar id="nav-bar" sticky="top" bg='dark' variant='dark'>
-                {/* to={`/categories/${cat.id}`} activeClassName="currentCategory" className="text-white">{cat.name}< */}
                 <NavLink className="navbar-brand" to="/">Martian</NavLink>
                 <Nav >
                     {/* Etiqueta a hace refrescar, quita funcionabilidad a react. Sirve solo cuando voy a externo.*/}

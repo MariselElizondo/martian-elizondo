@@ -1,13 +1,15 @@
-import {useState, useEffect} from 'react'
-import { useParams } from "react-router-dom";
-
 import './ItemListContainer.css';
 
+//Hooks
+import { useState, useEffect } from 'react'
+import { useParams } from "react-router-dom";
+
+//Componentes
 import ItemList from '../itemList/ItemList';
+
 import { getMock } from '../../services/getMock';
 
-
-function ItemListContainer({greeting}) {
+function ItemListContainer() {
 
     const [itemList, setItemList] = useState([])
 
@@ -33,8 +35,6 @@ function ItemListContainer({greeting}) {
 
     return (
         <div id="content" >
-
-            <h5>{greeting}</h5>
             <ItemList list={itemList}/>
         </div>
     )

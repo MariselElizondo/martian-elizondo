@@ -1,8 +1,13 @@
-import {useState, useEffect} from 'react'
-import ItemDetail from '../itemDetail/ItemDetail';
-import { useParams } from "react-router-dom";
-import { getMock } from '../../services/getMock';
 import './ItemDetailContainer.css';
+
+//Hooks
+import {useState, useEffect} from 'react'
+import { useParams } from "react-router-dom";
+
+//Componentes
+import ItemDetail from '../itemDetail/ItemDetail';
+
+import { getMock } from '../../services/getMock';
 
 function ItemDetailContainer() {
 
