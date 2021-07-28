@@ -1,17 +1,10 @@
 import './CartWidget.css';
-//Hooks
-import { useEffect } from 'react'
 
 //Componentes
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap'
 
-
 function CartWidget() {
-
-    useEffect(() => {
-        
-    }, [])
 
     return (
         <>

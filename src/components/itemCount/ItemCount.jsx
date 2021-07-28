@@ -25,8 +25,6 @@ function ItemCount({ id, name, price, initial, stock, onAdd }) {
             let newStock = itemStock - count
             setItemStock(newStock)
             setCount(initial)
-            let actual = localStorage.getItem('carrito-items')
-            localStorage.setItem("carrito-items", JSON.stringify([...actual, {'id':id, 'name':name, 'price':price, 'count':count}]))
         } else { alert("Acción inválida, no hay más stock") }
     }
 

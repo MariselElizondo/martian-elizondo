@@ -1,7 +1,7 @@
 import './ItemDetailContainer.css';
 
 //Hooks
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
 
 //Componentes
@@ -14,6 +14,7 @@ function ItemDetailContainer() {
     const [item, setItem] = useState({})
     const {itemId} = useParams()
 
+    
     useEffect(() => {
 
         const getItemMock = new Promise ((res, rej) => {
