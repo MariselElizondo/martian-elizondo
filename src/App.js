@@ -1,4 +1,9 @@
 import './App.css';
+
+//Hooks
+import {useState, useEffect} from 'react'
+
+//Components
 import { BrowserRouter as Router , Switch, Route } from "react-router-dom"; //Con as redefino el nombre : BrowserRouter as Router
 //Switch hace que cambie de pag a pag --> Navegación de SPA (sin refrescar pag)
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
@@ -8,6 +13,11 @@ import Cart from './components/cart/Cart';
 
 function App() {
 
+  useEffect(() => {
+    const carritoItems = localStorage.getItem("carrito-items");
+    if (carritoItems == null){ localStorage.setItem("carrito-items", []) }
+  }, [])
+  
   return (
     <Router>
       <div className="App">

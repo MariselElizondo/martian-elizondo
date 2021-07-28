@@ -116,17 +116,17 @@ const products = [
     {
         id:'ac2786', 
         cat:'carniceria',
-        title:'Pollo entero congelado', 
-        description:'x kg.', 
+        title:'Pollo entero', 
+        description:'congelado x kg.', 
         price:162.50, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/181409-1200-auto?width=1200&height=auto&aspect=true'
     },
     {
         id:'ac2189', 
         cat:'carniceria',
-        title:'Milanesas carne vacuna congeladas', 
-        description:'x 2kg.', 
-        price:1359.00, 
+        title:'Milanesas carne vacuna', 
+        description:'congeladas x kg.', 
+        price:679.5, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/204878-1200-auto?width=1200&height=auto&aspect=true'
     },
     {

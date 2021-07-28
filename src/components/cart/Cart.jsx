@@ -1,9 +1,20 @@
 import './Cart.css';
 
+//Hooks
+import {useState, useEffect} from 'react'
 //Componentes
 import { Image } from 'react-bootstrap'
 
 function Cart() {
+
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        let p = localStorage.getItem('carrito-items');
+        setProducts(p)
+        console.log(products);
+    }, [])
+
     return (
         <>
             <h4>Carrito de compras</h4>

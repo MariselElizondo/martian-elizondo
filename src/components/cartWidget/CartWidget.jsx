@@ -1,14 +1,22 @@
 import './CartWidget.css';
+//Hooks
+import { useEffect } from 'react'
 
 //Componentes
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap'
 
+
 function CartWidget() {
+
+    useEffect(() => {
+        
+    }, [])
+
     return (
         <>
+        <Link to="/cart">
             <Button variant="secondary">
-                <Link to="/cart">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24" height="24" viewBox="0 0 512.008 512.008" >
                         <g>
                         <path d="M488.791,65.235c-16.992-4.854-34.705,4.985-39.561,21.978l-2.51,8.791H148.249l-4.496-35.969
@@ -22,8 +30,8 @@ function CartWidget() {
                             s48-21.49,48-48l0,0c0-26.51-21.49-48-48-48S320,405.494,320,432.004z"/>
                         </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                     </svg>
-                </Link>
-            </Button>
+                </Button>   
+            </Link>
         </>
     )
 }

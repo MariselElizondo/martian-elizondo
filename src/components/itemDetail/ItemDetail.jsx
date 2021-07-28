@@ -31,7 +31,7 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
                                 </div>
                             </Row>
                             <Row>
-                                <ItemCount name={title} initial={1} stock={10} onAdd={handleCount} />
+                                <ItemCount id={id} name={title} price={price} initial={1} stock={10} onAdd={handleCount} />
                             </Row>
                         </Col>
                     </Row>
