@@ -1,12 +1,19 @@
 import './ItemDetail.css';
 
+//Hooks
+import { useState } from 'react'
+
 //Componentes
-import { Card, Col, Row } from 'react-bootstrap'
+import { Card, Col, Row, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import ItemCount from '../itemCount/ItemCount'
 
 function ItemDetail({ id, title, description, price, pictureUrl }) {
 
+    const [final, setFinal] = useState(false)
+
     const handleCount= (quantity, name) => {
+        setFinal(true)
         alert('Acaba de añadir al carrito ' + quantity + ' unidades de ' + name)
     }
     
@@ -31,7 +38,10 @@ function ItemDetail({ id, title, description, price, pictureUrl }) {
                                 </div>
                             </Row>
                             <Row>
-                                <ItemCount name={title} initial={1} stock={10} onAdd={handleCount} />
+                                { final
+                                ? <Link to="/cart"><Button variant="dark">Finalizar compra</Button></Link>
+                                : <ItemCount name={title} initial={1} stock={10} onAdd={handleCount} />
+                                }
                             </Row>
                         </Col>
                     </Row>
