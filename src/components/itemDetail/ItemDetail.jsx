@@ -2,17 +2,21 @@ import './ItemDetail.css';
 
 //Hooks
 import { useState } from 'react'
+import { useCartContext } from '../../context/CartContext';
 
 //Componentes
 import { Card, Col, Row, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import ItemCount from '../itemCount/ItemCount'
 
-function ItemDetail({ id, title, description, price, pictureUrl }) {
+function ItemDetail({ item, id, title, description, price, pictureUrl }) {
 
     const [final, setFinal] = useState(false)
 
+    const {inCart, guardarEnEstado} = useCartContext();
+
     const handleCount= (quantity, name) => {
+        guardarEnEstado({'item':{item}, 'quantity':quantity})
         setFinal(true)
         alert('Acaba de añadir al carrito ' + quantity + ' unidades de ' + name)
     }
