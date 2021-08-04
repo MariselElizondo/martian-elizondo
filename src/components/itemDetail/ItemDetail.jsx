@@ -13,10 +13,11 @@ function ItemDetail({ item, id, title, description, price, pictureUrl }) {
 
     const [final, setFinal] = useState(false)
 
-    const {inCart, guardarEnEstado} = useCartContext();
+    const { inCart, guardarEnEstado, isInCart, agregarCantidad } = useCartContext();
 
     const handleCount= (quantity, name) => {
-        guardarEnEstado({'item':{item}, 'quantity':quantity})
+        isInCart(id) ? agregarCantidad(id, quantity)
+        : guardarEnEstado({'item':{item}, 'quantity':quantity}) 
         setFinal(true)
         alert('Acaba de añadir al carrito ' + quantity + ' unidades de ' + name)
     }
