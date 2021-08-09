@@ -1,10 +1,15 @@
 import './CartWidget.css';
 
+//Hooks
+import { useCartContext } from '../../context/CartContext';
+
 //Componentes
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap'
 
 function CartWidget() {
+
+    const { quantityInCart } = useCartContext();
 
     return (
         <>
@@ -24,6 +29,7 @@ function CartWidget() {
                         </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                     </svg>
                 </Button>   
+                <div className="cart-count"> { quantityInCart } </div>
             </Link>
         </>
     )

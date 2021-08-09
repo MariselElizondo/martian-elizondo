@@ -14,13 +14,29 @@ function Cart() {
             <h4>Carrito de compras</h4>
             <Row>
                 <Image id="cart-image" src="https://image.flaticon.com/icons/png/512/107/107831.png" />
+                
                 <span className="list-cart col-6">
-                    {inCart.map((e) => <Row>
-                        <span className='col-8'>{e.item.item.title} ({e.item.item.description})</span>
-                        <span className='col-2'>cant. {e.quantity}</span>
-                        {/* <span className='col-2'>${e.item.item.price}</span> */}
-                    </Row>)}
+                    <table class="table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {inCart.map((e, index) => 
+                            <tr>
+                                <th scope="row">{index+1}</th>
+                                <td>{e.item.item.title} ({e.item.item.description})</td>
+                                <td>{e.quantity}</td>
+                                <td>{e.item.item.price}</td>
+                            </tr>)}
+                        </tbody>
+                    </table>
                 </span>
+                
             </Row>
         </>
     )

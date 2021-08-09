@@ -7,11 +7,17 @@ export const useCartContext = () => useContext(CartContext)
 const CartContextProvider = ({children}) => {
 
     const [inCart, setInCart] = useState([]);
+    const [quantityInCart, setQuantityInCart] = useState(0);
 
-   function guardarEnEstado(esto){
+    function guardarEnEstado(esto){
        setInCart([...inCart, esto])
     } 
 
+    const updateQuantity = (quantity) => {
+        let totalQuantity = quantityInCart + quantity;
+        setQuantityInCart(totalQuantity);
+    }
+    
     function isInCart(id) {
         let findProduct = inCart.filter(product => product.item.item.id === id)
         if (findProduct.length === 0) {
@@ -29,13 +35,21 @@ const CartContextProvider = ({children}) => {
         }
     }
 
+    function removeQuantity() {
+
+    }
+
     return (
         <CartContext.Provider 
             value={{
                 inCart, 
+                quantityInCart,
                 guardarEnEstado,
                 isInCart,
-                agregarCantidad
+                agregarCantidad,
+                updateQuantity,
+
+                removeQuantity
             }}
         >
             {children}
