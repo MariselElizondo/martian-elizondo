@@ -35,6 +35,8 @@ const CartContextProvider = ({children}) => {
         }
     }
 
+
+
     function removeQuantity() {
 
     }
@@ -48,7 +50,6 @@ const CartContextProvider = ({children}) => {
                 isInCart,
                 agregarCantidad,
                 updateQuantity,
-
                 removeQuantity
             }}
         >

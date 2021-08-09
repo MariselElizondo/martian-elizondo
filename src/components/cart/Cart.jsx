@@ -1,5 +1,6 @@
 import './Cart.css';
-/* import { useState, useEffect } from 'react' */
+
+//Hooks
 import { useCartContext } from '../../context/CartContext';
 
 //Componentes
@@ -31,7 +32,7 @@ function Cart() {
                                 <th scope="row">{index+1}</th>
                                 <td>{e.item.item.title} ({e.item.item.description})</td>
                                 <td>{e.quantity}</td>
-                                <td>{e.item.item.price}</td>
+                                <td>{e.quantity * e.item.item.price}</td>
                             </tr>)}
                         </tbody>
                     </table>

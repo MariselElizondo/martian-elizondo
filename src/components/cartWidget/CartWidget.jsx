@@ -13,6 +13,7 @@ function CartWidget() {
 
     return (
         <>
+        { quantityInCart>0 ?
         <Link to="/cart">
             <Button variant="secondary">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="24" height="24" viewBox="0 0 512.008 512.008" >
@@ -29,8 +30,10 @@ function CartWidget() {
                         </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                     </svg>
                 </Button>   
-                <div className="cart-count"> { quantityInCart } </div>
+                
+                <div className="cart-count"> { quantityInCart } </div> 
             </Link>
+            : <div></div>}
         </>
     )
 }
