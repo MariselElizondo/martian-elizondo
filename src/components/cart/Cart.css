@@ -10,5 +10,12 @@ h4 {
 
 .list-cart {
     margin-top: 6vh;
-    
+}
+
+.center {
+    text-align: center;
+}
+
+.space {
+    margin: 5%;
 }

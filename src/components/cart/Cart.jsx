@@ -4,8 +4,10 @@ import './Cart.css';
 import { useCartContext } from '../../context/CartContext';
 
 //Componentes
-import { Image, Row } from 'react-bootstrap'
+import { Image, NavLink, Row } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from 'bootstrap';
 
 function Cart() {
 
@@ -21,6 +23,7 @@ function Cart() {
     return (
         <>
             <h4>Carrito de compras</h4>
+            {inCart.length > 0 ? (
             <Row>
                 <Image id="cart-image" src="https://image.flaticon.com/icons/png/512/107/107831.png" />
                 
@@ -47,9 +50,15 @@ function Cart() {
                         </tbody>
                     </table>
                 </span>
-                
+                <div>Total: ${total > 0 && total}</div>
             </Row>
-            <div>Total: ${total > 0 && total}</div>
+            ) : (
+                <div className="center">
+                    <div className="space">Actualmente no hay items en el carrito</div>
+                    <Link className="navbar-brand space" to="/">Volver al inicio</Link>
+                </div>
+                )
+            }
         </>
     )
 }
