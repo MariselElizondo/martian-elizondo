@@ -13,7 +13,7 @@ function ItemDetail({ item, id, title, description, price, pictureUrl }) {
 
     const [final, setFinal] = useState(false)
 
-    const { guardarEnEstado, isInCart, agregarCantidad, updateQuantity, updatePrice } = useCartContext();
+    const { guardarEnEstado, isInCart, agregarCantidad, updateQuantity } = useCartContext();
 
     const handleCount= (quantity, name) => {
         isInCart(id) ? agregarCantidad(id, quantity)
