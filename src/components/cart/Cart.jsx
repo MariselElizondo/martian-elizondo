@@ -7,7 +7,6 @@ import { useCartContext } from '../../context/CartContext';
 import { Image, Row } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'bootstrap';
 
 function Cart() {
 
@@ -18,11 +17,7 @@ function Cart() {
         let variable = 0;
         inCart.map(e => variable+=(e.quantity * e.item.item.price))
         setTotal(variable);
-    }, [])
-
-    const remove = () => {
-
-    }
+    })
 
     return (
         <>
