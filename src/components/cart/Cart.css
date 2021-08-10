@@ -3,11 +3,6 @@ h4 {
     text-align: center;
 }
 
-#cart-image {
-    margin: 5%;
-    width: 20%;
-}
-
 .list-cart {
     margin-top: 6vh;
 }
@@ -18,4 +13,33 @@ h4 {
 
 .space {
     margin: 5%;
+}
+
+.total {
+    border: 1px solid #4E5385;
+}
+
+.remove {
+    float: right;
+    box-shadow: 0px 0px 0px transparent !important;
+}
+
+#cart-image {
+    margin: 5%;
+    width: 20%;
+    max-height: 350px;
+}
+
+@media (max-width:1200px ) {
+    #cart-image {
+        margin: 5%;
+        width: 20%;
+        max-height: 250px;
+    }
+}
+
+@media (max-width:1000px ) {
+    #cart-image {
+        max-height: 0px;
+    }
 }

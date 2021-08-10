@@ -4,7 +4,7 @@ const products = [
         cat:'almacen',
         title:"Mayonesa Hellmann's doy pack", 
         description:' 475 cc.',
-        price:129.30, 
+        price:129.00, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/200583-1200-auto?width=1200&height=auto&aspect=true'
     },
     {
@@ -12,7 +12,7 @@ const products = [
         cat:'almacen',
         title:'Aceite de girasol', 
         description:'Cocinero 1.5 l.',
-        price:216.35, 
+        price:216.00, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/192351-800-auto?width=800&height=auto&aspect=true'
     },
     {
@@ -20,7 +20,7 @@ const products = [
         cat:'almacen',
         title:'Harina de trigo', 
         description:'Morixe 000 1 kg.', 
-        price:49.80, 
+        price:50.00, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/175949-600-auto?width=600&height=auto&aspect=true'
     },          
     {
@@ -44,7 +44,7 @@ const products = [
         cat:'panaderia',
         title:'Prepizza de tomate', 
         description:'250 g. ($266,00 x 1 K.)', 
-        price:66.50, 
+        price:67.00, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/181547-800-auto?width=800&height=auto&aspect=true'
     },
     {
@@ -93,7 +93,7 @@ const products = [
         cat:'verduleria',
         title:'Repollo blanco', 
         description:'x kg.', 
-        price:89.90, 
+        price:90.0, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/201734-1200-auto?width=1200&height=auto&aspect=true'
     },
     {
@@ -110,7 +110,7 @@ const products = [
         cat:'carniceria',
         title:'Pechito de cerdo', 
         description:'x kg.', 
-        price:439.90, 
+        price:440.00, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/172997-1200-auto?width=1200&height=auto&aspect=true'
     },
     {
@@ -118,7 +118,7 @@ const products = [
         cat:'carniceria',
         title:'Pollo entero', 
         description:'congelado x kg.', 
-        price:162.50, 
+        price:162.00, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/181409-1200-auto?width=1200&height=auto&aspect=true'
     },
     {
@@ -126,7 +126,7 @@ const products = [
         cat:'carniceria',
         title:'Milanesas carne vacuna', 
         description:'congeladas x kg.', 
-        price:679.5, 
+        price:680.00, 
         pictureUrl:'https://carrefourar.vtexassets.com/arquivos/ids/204878-1200-auto?width=1200&height=auto&aspect=true'
     },
     {

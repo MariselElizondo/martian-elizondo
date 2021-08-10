@@ -4,7 +4,7 @@ import './Cart.css';
 import { useCartContext } from '../../context/CartContext';
 
 //Componentes
-import { Image, NavLink, Row } from 'react-bootstrap'
+import { Image, Row } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'bootstrap';
@@ -12,13 +12,17 @@ import { Button } from 'bootstrap';
 function Cart() {
 
     const [total, setTotal] = useState(0)
-    const {inCart} = useCartContext();
+    const {inCart, removeQuantity} = useCartContext();
 
     useEffect(() => {
         let variable = 0;
         inCart.map(e => variable+=(e.quantity * e.item.item.price))
         setTotal(variable);
     }, [])
+
+    const remove = () => {
+
+    }
 
     return (
         <>
@@ -35,30 +39,33 @@ function Cart() {
                                 <th scope="col">Producto</th>
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Precio ($)</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
-                        {inCart.map((e, index) => 
-                            <tr>
-                                <th scope="row">{index+1}</th>
-                                <td>{e.item.item.title} ({e.item.item.description})</td>
-                                <td>{e.quantity}</td>
-                                <td>{e.quantity * e.item.item.price}</td> 
-                            </tr>
-                        )}
-                            
+                            {inCart.map((e, index) => 
+                                <tr>
+                                    <th scope="row">{index+1}</th>
+                                    <td>{e.item.item.title} ({e.item.item.description})</td>
+                                    <td>{e.quantity}</td>
+                                    <td>{e.quantity * e.item.item.price}</td> 
+                                    <td>
+                                        <button className="btn btn-secondary remove" onClick={() => removeQuantity(e.item.item.id)}>
+                                            Remover</button>
+                                    </td>
+                                </tr>
+                            )}
                         </tbody>
                     </table>
                 </span>
-                <div>Total: ${total > 0 && total}</div>
+                <div className="center total navbar-brand">Total: ${total > 0 && total}</div>
             </Row>
             ) : (
                 <div className="center">
                     <div className="space">Actualmente no hay items en el carrito</div>
                     <Link className="navbar-brand space" to="/">Volver al inicio</Link>
                 </div>
-                )
-            }
+            ) }
         </>
     )
 }

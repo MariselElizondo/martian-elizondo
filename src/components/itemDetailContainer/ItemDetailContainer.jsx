@@ -33,7 +33,8 @@ function ItemDetailContainer() {
 
     return (
         <>
-            { loading ? <ItemDetail item={item} id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} /> : (<div className="my-spinner spinner-border text-info" role="status"></div>)}
+            { loading ? <ItemDetail item={item} id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} /> 
+            : (<div className="my-spinner spinner-border text-info" role="status"></div>)}
         </>
     )
 }

@@ -35,10 +35,16 @@ const CartContextProvider = ({children}) => {
         }
     }
 
-
-
-    function removeQuantity() {
-
+    function removeQuantity(id) {
+        let quantityToDeduct = 0;
+        for (const product of inCart) {
+            if(product.item.item.id === id){
+                quantityToDeduct += product.quantity; 
+            }
+        }
+        let remainingItems = inCart.filter(product => product.item.item.id !== id);
+        setInCart(remainingItems);
+        setQuantityInCart(quantityInCart - quantityToDeduct);
     }
 
     return (
