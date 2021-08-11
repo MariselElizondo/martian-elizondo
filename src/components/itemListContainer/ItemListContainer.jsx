@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 //Componentes
 import ItemList from '../itemList/ItemList';
-
+import { getFirestore } from '../../services/firebaseService';
 import { getMock } from '../../services/getMock';
 
 function ItemListContainer() {
@@ -17,10 +17,16 @@ function ItemListContainer() {
     const {categoryId} = useParams() //Automaticamente (por ser parámetro dinámico) lo toma de la ruta. String
 
     useEffect(() => {
-
+        //.where('category', '==', categoryId)
         setLoading(false)
+        const dbQuery = getFirestore()
+        dbQuery.collection('Products').get()
+        .then( res => setItemList(res.docs.map( product => 
+            ({ ...product.data(), id: product.id })
+        )));
+        console.log(itemList)
         
-        const getProducts = new Promise ((res, rej) => {
+        /* const getProducts = new Promise ((res, rej) => {
             setTimeout(() => {
                 setLoading(true)
                 res(getMock())
@@ -34,7 +40,7 @@ function ItemListContainer() {
 
         asyncGetProducts()
         .then(res => categoryId === undefined ? setItemList(res) : setItemList(res.filter( i => i.cat===categoryId)))
-        .catch(err => console.log(err))
+        .catch(err => console.log(err)) */
 
     }, [categoryId])
 

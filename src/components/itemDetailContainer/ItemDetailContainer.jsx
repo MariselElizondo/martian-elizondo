@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 //Componentes
 import ItemDetail from '../itemDetail/ItemDetail';
-
+import { getFirestore } from '../../services/firebaseService';
 import { getMock } from '../../services/getMock';
 
 function ItemDetailContainer() {
