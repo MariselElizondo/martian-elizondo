@@ -15,32 +15,28 @@ function ItemListContainer() {
     const [loading, setLoading] = useState(false)
 
     const {categoryId} = useParams() //Automaticamente (por ser parámetro dinámico) lo toma de la ruta. String
-
+//=undefined
     useEffect(() => {
         //.where('category', '==', categoryId)
-        setLoading(false)
-        const dbQuery = getFirestore()
-        dbQuery.collection('Products').get()
-        .then( res => setItemList(res.docs.map( product => 
-            ({ ...product.data(), id: product.id })
-        )));
-        console.log(itemList)
+
         
-        /* const getProducts = new Promise ((res, rej) => {
-            setTimeout(() => {
-                setLoading(true)
-                res(getMock())
-                rej("Error");
-            }, 2000);
-        });
-
-        const asyncGetProducts = () => {
-            return getProducts
-        }  
-
-        asyncGetProducts()
-        .then(res => categoryId === undefined ? setItemList(res) : setItemList(res.filter( i => i.cat===categoryId)))
-        .catch(err => console.log(err)) */
+        const dbQuery = getFirestore()
+        categoryId === undefined ? (
+            dbQuery.collection('Products').get()
+            .then( res => 
+                setItemList(res.docs.map( product => 
+                    ({ ...product.data(), id: product.id }) 
+                ))
+            )
+            .catch(err => console.log(err)) 
+        ) : ( dbQuery.collection('Products').where('category', '==', categoryId).get()
+            .then( res => 
+                setItemList(res.docs.map( product => 
+                ({ ...product.data(), id: product.id })))
+            )
+            .catch(err => console.log(err)) 
+        )
+        setLoading(true)
 
     }, [categoryId])
 

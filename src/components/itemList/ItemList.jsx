@@ -10,7 +10,7 @@ function ItemList({list}) {
     return (
         <>
             <Row>
-                { list.map( i => <Item key={i.id} id={i.id} title={i.title} cat={i.cat} price={i.price} pictureUrl={i.pictureUrl}/> ) }
+                { list.map( i => <Item key={i.id} id={i.id} title={i.title} category={i.category} price={i.price} picture_url={i.picture_url}/> ) }
             </Row>
         </>
     )

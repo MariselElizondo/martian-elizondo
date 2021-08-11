@@ -16,9 +16,9 @@ const firebaseConfig = {
 const appFirebase = firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-export function getFirebase(){
+/* export function getFirebase(){
     return appFirebase
-}
+} */
 
 export function getFirestore(){
     return firebase.firestore(appFirebase)

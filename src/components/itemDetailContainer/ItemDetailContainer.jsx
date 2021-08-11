@@ -18,9 +18,17 @@ function ItemDetailContainer() {
 
     useEffect(() => {
 
-        const getItemMock = new Promise ((res, rej) => {
+        //.where('category', '==', categoryId)
+        
+        const dbQuery = getFirestore()
+        dbQuery.collection('Products').doc(itemId).get()
+        .then( res => setItem({ id: res.id, ...res.data() }));
+        console.log(item);
+
+        
+        /* const getItemMock = new Promise ((res, rej) => {
             setTimeout(() => {
-                setLoading(true)
+                
                 res(getMock())
                 rej("Error");
             }, 2000);
@@ -28,12 +36,13 @@ function ItemDetailContainer() {
 
         getItemMock
         .then(res => res.filter( i => i.id === itemId ? setItem(i) :''))
-        .catch(err => console.log(err))
+        .catch(err => console.log(err)) */
+        setLoading(true)
     }, [itemId])
 
     return (
         <>
-            { loading ? <ItemDetail item={item} id={item.id} title={item.title} description={item.description} price={item.price} pictureUrl={item.pictureUrl} /> 
+            { loading ? <ItemDetail item={item} id={item.id} title={item.Title} description={item.Description} price={item.Price} picture_url={item.Picture_Url} /> 
             : (<div className="my-spinner spinner-border text-info" role="status"></div>)}
         </>
     )

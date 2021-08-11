@@ -9,7 +9,7 @@ import { Card, Col, Row, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import ItemCount from '../itemCount/ItemCount'
 
-function ItemDetail({ item, id, title, description, price, pictureUrl }) {
+function ItemDetail({ item, id, title, description, price, picture_url }) {
 
     const [final, setFinal] = useState(false)
 
@@ -29,7 +29,7 @@ function ItemDetail({ item, id, title, description, price, pictureUrl }) {
                 <Card.Body>
                     <Row>
                         <Col className='col-5'>
-                            <Card.Img variant='top' src={pictureUrl} />
+                            <Card.Img variant='top' src={picture_url} />
                         </Col>
                         <Col className='col-1'/>
                         <Col className='more-detail col-5'>
