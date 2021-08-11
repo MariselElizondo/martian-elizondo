@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 //Componentes
 import ItemDetail from '../itemDetail/ItemDetail';
 import { getFirestore } from '../../services/firebaseService';
-import { getMock } from '../../services/getMock';
 
 function ItemDetailContainer() {
 
@@ -18,31 +17,18 @@ function ItemDetailContainer() {
 
     useEffect(() => {
 
-        //.where('category', '==', categoryId)
-        
         const dbQuery = getFirestore()
         dbQuery.collection('Products').doc(itemId).get()
-        .then( res => setItem({ id: res.id, ...res.data() }));
-        console.log(item);
-
+        .then( res => setItem({ id: res.id, ...res.data() }))
+        .catch(err => console.log(err))
         
-        /* const getItemMock = new Promise ((res, rej) => {
-            setTimeout(() => {
-                
-                res(getMock())
-                rej("Error");
-            }, 2000);
-        });
-
-        getItemMock
-        .then(res => res.filter( i => i.id === itemId ? setItem(i) :''))
-        .catch(err => console.log(err)) */
         setLoading(true)
+
     }, [itemId])
 
     return (
         <>
-            { loading ? <ItemDetail item={item} id={item.id} title={item.Title} description={item.Description} price={item.Price} picture_url={item.Picture_Url} /> 
+            { loading ? <ItemDetail item={item} id={item.id} title={item.title} description={item.description} price={item.price} picture_url={item.picture_url} /> 
             : (<div className="my-spinner spinner-border text-info" role="status"></div>)}
         </>
     )

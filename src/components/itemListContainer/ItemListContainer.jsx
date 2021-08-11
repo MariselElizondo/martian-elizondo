@@ -17,10 +17,9 @@ function ItemListContainer() {
     const {categoryId} = useParams() //Automaticamente (por ser parámetro dinámico) lo toma de la ruta. String
 //=undefined
     useEffect(() => {
-        //.where('category', '==', categoryId)
 
-        
         const dbQuery = getFirestore()
+        
         categoryId === undefined ? (
             dbQuery.collection('Products').get()
             .then( res => 
