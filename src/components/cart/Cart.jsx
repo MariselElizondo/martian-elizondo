@@ -8,10 +8,36 @@ import { Image, Row } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+import { getFirestore } from '../../services/firebaseService'
+import firebase from 'firebase/app';
+import '@firebase/firestore';
+
 function Cart() {
 
-    const [total, setTotal] = useState(0)
+    const [total, setTotal] = useState(0);
+    const [buyer, setBuyer] = useState({name:'', phone:'', email:''});
     const {inCart, removeQuantity} = useCartContext();
+
+    const handlerChangeBuyer = (e) => {
+        setBuyer({
+            ...buyer,
+            [e.target.name]: e.target.value
+        })
+    }
+    
+    const handlerSubmitPurchase = (e) => {
+        e.preventDefault()
+        const db = getFirestore()
+        //set actuliza o crea, add, además, agrega un id automáticamente
+        db.collection('Order').add({
+            buyer, 
+            item: inCart.map( i => i.item.item), 
+            date: firebase.firestore.Timestamp.fromDate(new Date()), 
+            total: total}) 
+        .then( res => console.log(res))
+        .then(alert('Su compra se ha procesado con éxito'))
+        .catch( err => console.log(err))
+    }
 
     useEffect(() => {
         let variable = 0;
@@ -54,6 +80,16 @@ function Cart() {
                     </table>
                 </span>
                 <div className="center total navbar-brand">Total: ${total > 0 && total}</div>
+               
+                <h4>Para continuar con la compra, por favor ingrese sus datos</h4>
+                <form id='cart-form' onChange={handlerChangeBuyer} onSubmit={handlerSubmitPurchase}>
+                    <input type='text' placeholder='Nombre' name='name' value={buyer.name}></input>
+                    <input type='text' placeholder='Teléfono' name='phone' value={buyer.phone}></input>
+                    <input type='email' placeholder='Mail' name='email' value={buyer.email}></input>
+                
+                    <button className='btn btn-secondary'>Confirmar compra</button>
+                
+                </form>
             </Row>
             ) : (
                 <div className="center">
@@ -61,6 +97,8 @@ function Cart() {
                     <Link className="navbar-brand space" to="/">Volver al inicio</Link>
                 </div>
             ) }
+
+            
         </>
     )
 }

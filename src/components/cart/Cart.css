@@ -17,6 +17,7 @@ h4 {
 
 .total {
     border: 1px solid #4E5385;
+    margin-bottom: 50px;
 }
 
 .remove {
@@ -30,6 +31,17 @@ h4 {
     max-height: 350px;
 }
 
+#cart-form {
+    text-align: center;
+}
+
+#cart-form input, #cart-form button {
+    width: 40%;
+    margin: 1% auto;
+    text-align: center;
+    display: block;
+}
+
 @media (max-width:1200px ) {
     #cart-image {
         margin: 5%;
@@ -39,7 +51,14 @@ h4 {
 }
 
 @media (max-width:1000px ) {
-    #cart-image {
-        max-height: 0px;
-    }
+
+    #cart-image { max-height: 0px }
+
+    #cart-form input { width: 65% }
 }
+
+@media (max-width:500px ) {
+
+    #cart-form input { width: 95% }
+}
+
