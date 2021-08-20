@@ -12,10 +12,13 @@ import { getFirestore } from '../../services/firebaseService'
 import firebase from 'firebase/app';
 import '@firebase/firestore';
 
+import PurchaseModal from '../purchaseModal/PurchaseModal';
+
 function Cart() {
 
     const [total, setTotal] = useState(0);
     const [buyer, setBuyer] = useState({name:'', phone:'', email:''});
+    const [orderCode, setOrderCode] = useState(0)
     const {inCart, removeQuantity} = useCartContext();
 
     const handlerChangeBuyer = (e) => {
@@ -34,8 +37,8 @@ function Cart() {
             item: inCart.map( i => i.item.item), 
             date: firebase.firestore.Timestamp.fromDate(new Date()), 
             total: total}) 
+        .then( res => setOrderCode(res.id))
         .then( res => console.log(res))
-        .then(alert('Su compra se ha procesado con éxito'))
         .catch( err => console.log(err))
     }
 
@@ -86,9 +89,10 @@ function Cart() {
                     <input type='text' placeholder='Nombre' name='name' value={buyer.name}></input>
                     <input type='text' placeholder='Teléfono' name='phone' value={buyer.phone}></input>
                     <input type='email' placeholder='Mail' name='email' value={buyer.email}></input>
-                
-                    <button className='btn btn-secondary'>Confirmar compra</button>
-                
+                    {
+                        (buyer.name !== '' && buyer.phone !== '' && buyer.email !== '') &&
+                        <PurchaseModal phrase={'Confirmar compra'} orderCode={orderCode}/>
+                    }
                 </form>
             </Row>
             ) : (
