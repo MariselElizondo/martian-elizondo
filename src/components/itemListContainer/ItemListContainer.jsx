@@ -8,12 +8,14 @@ import { useParams } from "react-router-dom";
 import ItemList from '../itemList/ItemList';
 import { getFirestore } from '../../services/firebaseService';
 import { getMock } from '../../services/getMock';
+import Path from '../path/Path';
 
 function ItemListContainer() {
 
     const [itemList, setItemList] = useState([])
     const [loading, setLoading] = useState(false)
-
+    const [title, setTitle] = useState('')
+    
     const {categoryId} = useParams() //Automaticamente (por ser parámetro dinámico) lo toma de la ruta. String
 //=undefined
     useEffect(() => {
@@ -40,9 +42,12 @@ function ItemListContainer() {
     }, [categoryId])
 
     return (
-        <div id="content" >
-            { loading ? <ItemList list={itemList}/> : (<div className="my-spinner spinner-border text-info" role="status"></div>)}
-        </div>
+        <>
+            <div className="content" >
+                <Path category={categoryId} title={title}/>
+                { loading ? <ItemList list={itemList}/> : (<div className="my-spinner spinner-border text-info" role="status"></div>)}
+            </div>
+        </>
     )
 }
 

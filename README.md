@@ -14,3 +14,12 @@ En el video puede verse el flujo de navegación.
 Muchas gracias.
 
 *Recordar hacer **npm install** antes del **npm start***
+
+Adiciones:
+Mensaje de confirmación de compra con su respectivo código
+ctualización de manera de cargar el detail del item
+carpeta con íconos svg e importación de los mismos para su uso
+Mostrar ruta
+
+meorar estética de item
+..item detail
