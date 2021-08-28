@@ -18,10 +18,8 @@
 }
 
 .price {
-    color: #6469B2;
-    border-radius: 25%;
-    padding: 2px 4px;
-    box-shadow: 2px 2px 20px#6c757d;
+    color:#424474 !important;
+    text-align: center !important;
 }
 
 a{

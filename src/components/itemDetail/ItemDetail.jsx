@@ -38,7 +38,7 @@ function ItemDetail({ item, id, title, description, price, picture_url }) {
                                     <Card.Title className="upper">{title}</Card.Title>
                                     <strong className='price'>$ {price}</strong> 
                                 </div>
-                                <div className="container-1">
+                                <div className="container-2">
                                     <div>Cod: {id}</div>
                                     <p>{description} </p>  
                                 </div>
