@@ -20,6 +20,9 @@ Mensaje de confirmación de compra con su respectivo código
 ctualización de manera de cargar el detail del item
 carpeta con íconos svg e importación de los mismos para su uso
 Mostrar ruta
-
-meorar estética de item
+mejorar estética de item
 ..item detail
+
+contact
+footer
+funcionalidad de búsqueda

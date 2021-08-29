@@ -10,6 +10,7 @@ import ItemListContainer from './components/itemListContainer/ItemListContainer'
 import NavBar from './components/navBar/NavBar';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 import Cart from './components/cart/Cart';
+import Contact from './components/contact/Contact';
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
               <Route exact path="/categoria/:categoryId/:itemId" component={ItemDetailContainer} /> 
               <Route exact path="/cart" component={Cart} />
             </Switch>
+          <Contact></Contact>
+          <footer id="footer">footer</footer>
         </div>
       </Router>
     </CartContextProvider>
