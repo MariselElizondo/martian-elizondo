@@ -1,5 +1,6 @@
 import { Col, Row } from 'react-bootstrap';
 import './Footer.css';
+import logo from './logo.png';
 
 function Footer() {
 
@@ -16,7 +17,8 @@ function Footer() {
                 <span>¡ Y muchas más !</span>
             </Col>
             <Col className="container-inside">
-                dfgd
+                <span><strong>MARTIAN</strong></span><br/>
+                <img src={logo} style={{width:'40%'}} alt="logo"></img>
             </Col>
             <Col className="container-inside">
                 <span><strong>SERVICIO AL CLIENTE</strong></span><br/>
