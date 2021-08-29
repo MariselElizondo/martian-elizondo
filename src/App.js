@@ -11,6 +11,7 @@ import NavBar from './components/navBar/NavBar';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 import Cart from './components/cart/Cart';
 import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
               <Route exact path="/cart" component={Cart} />
             </Switch>
           <Contact></Contact>
-          <footer id="footer">footer</footer>
+          <Footer></Footer>
         </div>
       </Router>
     </CartContextProvider>

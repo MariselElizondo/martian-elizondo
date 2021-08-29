@@ -1,0 +1,19 @@
+.container-3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.container-inside {
+    width: 33%;
+    border-right: 3px solid gray;
+    text-align: center;
+}
+
+.container-inside:last-child {
+    border-right: 0px solid;
+}
+
+.footer-button a {
+    color: aliceblue !important;
+}
