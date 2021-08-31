@@ -6,9 +6,10 @@ import { useParams } from "react-router-dom";
 
 //Componentes
 import ItemList from '../itemList/ItemList';
-import { getFirestore } from '../../services/firebaseService';
-import { getMock } from '../../services/getMock';
 import Path from '../path/Path';
+
+//Firebase
+import { getFirestore } from '../../services/firebaseService';
 
 function ItemListContainer() {
 

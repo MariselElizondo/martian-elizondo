@@ -6,8 +6,11 @@ import { useParams } from "react-router-dom";
 
 //Componentes
 import ItemDetail from '../itemDetail/ItemDetail';
-import { getFirestore } from '../../services/firebaseService';
 import Path from '../path/Path';
+
+//Firebase
+import { getFirestore } from '../../services/firebaseService';
+
 function ItemDetailContainer() {
 
     const [item, setItem] = useState({})

@@ -2,17 +2,17 @@ import './Cart.css';
 
 //Hooks
 import { useCartContext } from '../../context/CartContext';
+import { useState, useEffect } from 'react';
 
 //Componentes
 import { Image, Row } from 'react-bootstrap'
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PurchaseModal from '../purchaseModal/PurchaseModal';
 
+//Firebase
 import { getFirestore } from '../../services/firebaseService'
 import firebase from 'firebase/app';
 import '@firebase/firestore';
-
-import PurchaseModal from '../purchaseModal/PurchaseModal';
 
 function Cart() {
 
@@ -101,8 +101,6 @@ function Cart() {
                     <Link className="navbar-brand space" to="/">Volver al inicio</Link>
                 </div>
             ) }
-
-            
         </>
     )
 }

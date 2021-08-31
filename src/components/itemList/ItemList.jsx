@@ -4,7 +4,6 @@ import './ItemList.css';
 import { Row } from 'react-bootstrap'
 import Item from '../item/Item'
 
-
 function ItemList({list}) {
 
     return (

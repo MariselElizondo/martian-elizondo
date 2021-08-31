@@ -1,8 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import './Path.css';
 
+//Componentes
 import { Nav } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
+
+//Iconos
 import go from "../../icons/go.svg";
 
 function Path( { category, id, title } ) {

@@ -1,10 +1,10 @@
-import { Col, Row } from 'react-bootstrap';
 import './Footer.css';
 import logo from './logo.png';
 
-function Footer() {
+//Componentes
+import { Col } from 'react-bootstrap';
 
-    //const [total, setTotal] = useState(0);
+function Footer() {
 
     return (
         <div className="container-3">

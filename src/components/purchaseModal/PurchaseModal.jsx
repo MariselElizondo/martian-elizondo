@@ -1,8 +1,10 @@
 
+//Hooks
 import { useState } from "react";
-import Modal from 'react-bootstrap/Modal'
-import { Link } from "react-router-dom";
 
+//Componentes
+import { Link } from "react-router-dom";
+import Modal from 'react-bootstrap/Modal'
 
 function PurchaseModal( { phrase, orderCode } ) {
 
