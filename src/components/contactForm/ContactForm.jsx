@@ -13,7 +13,7 @@ function ContactForm( ) {
         <>
         {/* Simulo el envío de un mail a la compañía */}
             <h4>¿Qué te gustaría decirnos?</h4>
-            <form style={{textAlign:'center'}}>
+            <form style={{textAlign:'center'}} onSubmit={e => handleSend()}>
                 <label>
                     <textarea name="message" type="text" placeholder='Dejá tu comentario, crítica constructiva o sugerencia' style={{width:'50vw', height:'20vh'}} required></textarea>
                 </label><br/>
@@ -25,7 +25,7 @@ function ContactForm( ) {
                     <input name="news" type="checkbox"/>                    
                 </label><br/>
                 <label>
-                    <button className='btn btn-secondary' onClick={handleSend}> Enviar </button>
+                    <button className='btn btn-secondary'> Enviar </button>
                 </label>
             </form>
         </>

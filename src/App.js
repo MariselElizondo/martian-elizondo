@@ -5,7 +5,7 @@ import CartContextProvider from "./context/CartContext";
 
 //Components
 import { BrowserRouter as Router , Switch, Route } from "react-router-dom"; //Con as redefino el nombre : BrowserRouter as Router
-//Switch hace que cambie de pag a pag --> Navegación de SPA (sin refrescar pag)
+/* Switch hace que cambie de pag a pag --> Navegación de SPA (sin refrescar pag) */
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import NavBar from './components/navBar/NavBar';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
