@@ -1,0 +1,7 @@
+label {
+    padding-top: 1%;
+}
+
+label:last-child{
+    padding-bottom: 2%;
+}

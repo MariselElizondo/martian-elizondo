@@ -12,7 +12,7 @@ import ItemDetailContainer from './components/itemDetailContainer/ItemDetailCont
 import Cart from './components/cart/Cart';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-
+import ContactForm from './components/contactForm/ContactForm';
 
 function App() {
 
@@ -26,6 +26,7 @@ function App() {
               <Route exact path="/categoria/:categoryId" component={ItemListContainer} /> {/* :parametroDinámico */}
               <Route exact path="/categoria/:categoryId/:itemId" component={ItemDetailContainer} /> 
               <Route exact path="/cart" component={Cart} />
+              <Route exact path="/contact-form" component={ContactForm} />
             </Switch>
           <Contact></Contact>
           <Footer></Footer>

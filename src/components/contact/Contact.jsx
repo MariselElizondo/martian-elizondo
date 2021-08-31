@@ -4,6 +4,7 @@ import './Contact.css'
 import instagram from "../../icons/instagram.svg";
 import linkedin from "../../icons/linkedin.svg";
 import dialog from "../../icons/dialog.svg";
+import { Link } from 'react-router-dom';
 
 function Contact() {
 
@@ -20,7 +21,8 @@ function Contact() {
                 <div className="contact-web" style={{float:'right', clear:'left'}}>
                     <img src={dialog} alt="dialog"></img>
                     <span> ¿Tenés una consulta?</span><br/>
-                    <span><a href="">Contactate con nosotros</a></span>
+                    <span><a><Link to="/contact-form">Contactate con nosotros</Link></a></span>
+                    
                 </div>
             </div>      
         </>
