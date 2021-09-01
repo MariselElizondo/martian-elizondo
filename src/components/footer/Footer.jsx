@@ -22,8 +22,8 @@ function Footer() {
             </Col>
             <Col className="container-inside">
                 <span><strong>SERVICIO AL CLIENTE</strong></span><br/>
+                <a href="https://slack.com/intl/es-ar/">Slack</a><br/>
                 <a href="https://comunidadcoderhouse.com/c/Coderhouse-Online_1343">Comunidad Coder House</a><br/>
-                <a href="">Donde estamos</a><br/>
                 <br/><button className="btn btn-secondary footer-button"><a href="">Boton de arrepentimiento</a></button>
             </Col>
         </div>

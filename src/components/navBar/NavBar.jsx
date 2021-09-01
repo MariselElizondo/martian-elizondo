@@ -12,7 +12,6 @@ function NavBar() {
             <Navbar id="nav-bar" sticky="top" bg='dark' variant='dark'>
                 <NavLink className="navbar-brand" to="/">Martian</NavLink>
                 <Nav >
-                    {/* Etiqueta a hace refrescar, quita funcionabilidad a react. Sirve solo cuando voy a externo.*/}
                     <NavLink className="nav-link" to="/categoria/almacen">Almacen</NavLink>
                     <NavLink className="nav-link" to="/categoria/verduleria">Verdulería</NavLink>
                     <NavLink className="nav-link" to="/categoria/panaderia">Panadería</NavLink>

@@ -17,9 +17,9 @@ function ItemListContainer() {
     const [loading, setLoading] = useState(false)
     const [title, setTitle] = useState('')
     
-    const {categoryId} = useParams() //Automaticamente (por ser parámetro dinámico) lo toma de la ruta. String
-//=undefined
+    const {categoryId} = useParams()
     useEffect(() => {
+        setTitle('')
 
         const dbQuery = getFirestore()
         
@@ -39,7 +39,7 @@ function ItemListContainer() {
             .catch(err => console.log(err)) 
         )
         setLoading(true)
-
+        //eslint-disable-next-line
     }, [categoryId])
 
     return (

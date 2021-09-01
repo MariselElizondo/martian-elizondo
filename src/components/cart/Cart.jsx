@@ -50,6 +50,7 @@ function Cart() {
 
     return (
         <>
+        <div className='content'>
             <h4>Carrito de compras</h4>
             {inCart.length > 0 ? (
             <Row>
@@ -87,7 +88,7 @@ function Cart() {
                 <h4>Para continuar con la compra, por favor ingrese sus datos</h4>
                 <form id='cart-form' onChange={handlerChangeBuyer} onSubmit={handlerSubmitPurchase}>
                     <input type='text' placeholder='Nombre' name='name' value={buyer.name}></input>
-                    <input type='text' placeholder='Teléfono' name='phone' value={buyer.phone}></input>
+                    <input type='number' placeholder='Teléfono' name='phone' value={buyer.phone}></input>
                     <input type='email' placeholder='Mail' name='email' value={buyer.email}></input>
                     {
                         (buyer.name !== '' && buyer.phone !== '' && buyer.email !== '') &&
@@ -101,6 +102,7 @@ function Cart() {
                     <Link className="navbar-brand space" to="/">Volver al inicio</Link>
                 </div>
             ) }
+            </div>
         </>
     )
 }
